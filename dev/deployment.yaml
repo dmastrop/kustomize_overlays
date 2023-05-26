@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hw-deployment
+  #this only needs the delta but the yaml hierarchy has to be maintained to the delta below
+  #the metadata above is required so that kustomize can link this overlay to the proper base deployment "hw-deployment".
+spec:
+  template:
+    spec:
+      containers:
+      - name: app
+        env:
+          - name: DEBUG
+            value: "true"
+            #the debug here is the diff with the base deployment.yaml file

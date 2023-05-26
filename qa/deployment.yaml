@@ -1,0 +1,7 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hw-deployment
+spec:
+  replicas: 2
+  # this has the diff with the base of replicas=1

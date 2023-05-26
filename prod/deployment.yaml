@@ -1,0 +1,7 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hw-deployment
+spec:
+  replicas: 2
+  # this  is identical to qa. In practice the qa and production deployment should be very similar.
